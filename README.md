@@ -43,27 +43,7 @@ Customer Features:
 
 ---
 
-3. Implementation Details
-
-The system is structured as follows:
-
-online-shopping-system/
-│── main.py                      # Main entry point of the application
-│── data/
-│   ├── admins.csv                # Admin data
-│   ├── order_history.csv         # Order history data
-│   ├── products.csv              # Product list
-│── models/
-│   ├── cart.py                   # Shopping cart model
-│   ├── product.py                # Product model
-│── users/
-│   ├── admin.py                  # Admin functionalities
-│   ├── customer.py               # Customer functionalities
-│   ├── user.py                    # User base class
-
----
-
-4. Sample Execution & Output
+3. Sample Execution & Output
 
 Admin Menu:
 
@@ -98,7 +78,7 @@ Headphones added successfully!
 Customer Menu:
 
 Hello, Customer!
------------------------------
+
 1) View Products
 2) Add to Cart
 3) View Cart
@@ -131,7 +111,7 @@ Order placed successfully!
 
 ---
 
-5. Data Storage
+4. Data Storage
 
 Products are stored in data/products.csv
 
@@ -141,6 +121,6 @@ Admin credentials are stored in data/admins.csv
 
 ---
 
-6. Conclusion
+5. Conclusion
 
 The CLI-Based Online Shopping System efficiently allows admins to manage products and customers to shop conveniently. The system follows an interactive command-line interface to provide a smooth shopping experience.
