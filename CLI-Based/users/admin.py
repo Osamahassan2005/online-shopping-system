@@ -70,7 +70,7 @@ class Admin(User):
         updated =False
         for row in product:
             if row[0] == product_name:
-               row[2]=str(new_quantity)
+               row[2]=str(int(row[2])+int(new_quantity))
                updated=True
         if updated:
             with open('data/products.csv','w',newline='') as f:
