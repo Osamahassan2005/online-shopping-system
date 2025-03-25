@@ -1,66 +1,64 @@
 import streamlit as st
 class Payment:
-    def __init__(self, amount,customer_name):
+    def __init__(self, amount, customer_name):
         self.amount = amount
         self.customer_name = customer_name
         self.payment_method = None
         self.details = []
-    
+
     def process_payment(self):
         payment_method = st.selectbox('Select payment method', ['Credit/Debit Card', 'Bank Transfer', 'Mobile Money'])
         if payment_method == 'Credit/Debit Card':
             self.payment_method = 'Credit/Debit Card'
-            return  self.credit_debit_card_payment()
-            
+            return self.credit_debit_card_payment()
         elif payment_method == 'Bank Transfer':
             self.payment_method = 'Bank Transfer'
             return self.bank_transfer()
-            
         elif payment_method == 'Mobile Money':
             self.payment_method = 'Mobile Money'
             return self.mobile_money()
-            
-        else:
-            st.error('Invalid payment method')
-            return False
+        st.error('Invalid payment method')
+        return False
+
     def credit_debit_card_payment(self):
-        st.write('''please enter your credit/debit card details
-        ''')
+        st.write('Please enter your credit/debit card details')
         card_number = st.text_input('Enter your credit/debit card number: ')
         card_expiry = st.text_input('Enter your credit/debit card expiry date (MM/YY): ')
         card_cvv = st.text_input('Enter your credit/debit card CVV: ')
-        if st.button('Confirm Payment') and card_number != '' and card_expiry != '' and card_cvv != '':
-            self.details.append(f'Credit/Debit Card: {card_number}, Expiry: {card_expiry}, CVV: {card_cvv}')
-            return True
-        else:
-            st.error('Payment failed! Please try again.')
-            return False
-        
+        if st.button('Confirm Payment'):
+            if card_number and card_expiry and card_cvv:
+                self.details.append(f'Credit/Debit Card: {card_number}, Expiry: {card_expiry}, CVV: {card_cvv}')
+                st.success('Payment successful!')
+                return True
+            st.error('Payment failed! Please fill in all fields.')
+        return False
+
     def bank_transfer(self):
-        st.write('''please enter your bank transfer details
-        ''')
+        st.write('Please enter your bank transfer details')
         bank_account_number = st.text_input('Enter your bank account number: ')
         bank_routing_number = st.text_input('Enter your bank routing number: ')
-        if st.button('Confirm Payment') and bank_account_number != '' and bank_routing_number != '':
-            self.details.append(f'Bank Transfer: {bank_account_number}, Routing: {bank_routing_number}')
-            return True
-        else:
-            st.error('Payment failed! Please try again.')
-            return False
-        
+        if st.button('Confirm Payment'):
+            if bank_account_number and bank_routing_number:
+                self.details.append(f'Bank Transfer: {bank_account_number}, Routing: {bank_routing_number}')
+                st.success('Payment successful!')
+                return True
+            st.error('Payment failed! Please fill in all fields.')
+        return False
+
     def mobile_money(self):
-        st.write('''please enter your mobile money details
-                 ''')    
+        st.write('Please enter your mobile money details')    
         mobile_money_number = st.text_input('Enter your mobile money number: ')
         mobile_money_provider = st.text_input('Enter your mobile money provider: ')
-        if st.button('Confirm Payment') and mobile_money_number != '' and mobile_money_provider != '':
-            self.details.append(f'Mobile Money: {mobile_money_number}, Provider: {mobile_money_provider}')
-            return True
-        else:
-            st.error('Payment failed! Please try again.')
-            return False
- 
-        
+        if st.button('Confirm Payment'):
+            if mobile_money_number and mobile_money_provider:
+                self.details.append(f'Mobile Money: {mobile_money_number}, Provider: {mobile_money_provider}')
+                st.success('Payment successful!')
+                return True
+            st.error('Payment failed! Please fill in all fields.')
+        return False
+
+
+
 # ## cli
 # class Payment:
 #     def __init__(self, amount,customer_name):
