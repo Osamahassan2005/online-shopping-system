@@ -72,7 +72,6 @@ class Customer(User):
         payment=Payment(total_price,self.name)
         time=datetime.now().strftime("**Date** : %y-%m-%d & **Time** : %H:%M:%S")
         if payment.process_payment():
-            st.success('Payment successful')
             st.session_state['checkout_success']=True
             st.session_state['cart_items_copy']=self.cart.items.copy()
             st.session_state['payment_details']='.'.join(payment.details)
