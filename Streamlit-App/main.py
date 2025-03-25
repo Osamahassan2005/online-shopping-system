@@ -124,7 +124,7 @@ def main_menu():
     )
     if option == "Home":
         st.write("Welcome to the Online Shopping System!")
-        st.image("data/online-shopping.jpg")
+        st.image("Streamlit-App/data/online-shopping.jpg")
         st.balloons()
         st.subheader("Instructions :")
         st.write('-'*40)
