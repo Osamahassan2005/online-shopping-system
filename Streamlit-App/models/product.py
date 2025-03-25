@@ -11,7 +11,7 @@ class Product:
         self.stock =stock
     def add_products(self):
         '''Save product details to products.csv'''
-        file_path='data/products.csv'
+        file_path='Streamlit-App/data/products.csv'
         file_exists=os.path.isfile(file_path)
         products=[]
         if file_exists:
@@ -33,7 +33,7 @@ class Product:
     def display_products():
         '''Display available products'''
         try:
-            df=pd.read_csv('data/products.csv')
+            df=pd.read_csv('Streamlit-App/data/products.csv')
             if df.empty:
                 st.error('No products available.')
                 return
@@ -46,7 +46,7 @@ class Product:
         '''Update stock of existing product'''
         try:
             quantity=int(quantity)
-            file_path='data/products.csv'
+            file_path='Streamlit-App/data/products.csv'
             with open(file_path,'r') as f:
                 reader=csv.DictReader(f)
                 products=[row for row in reader if row]
@@ -74,7 +74,7 @@ class Product:
     def get_product_names():
         '''Get product names'''
         try:
-            with open('data/products.csv','r') as f:
+            with open('Streamlit-App/data/products.csv','r') as f:
                 reader=csv.DictReader(f)
                 products=[row['product_name'].strip() for row in reader if row]
             return products
