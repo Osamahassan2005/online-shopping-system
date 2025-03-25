@@ -4,6 +4,7 @@ import time
 from models.product import Product
 from users.customer import Customer
 from users.admin import Admin
+import os
 
 # Initialize session state for navigation
 if "page" not in st.session_state:
@@ -124,7 +125,7 @@ def main_menu():
     )
     if option == "Home":
         st.write("Welcome to the Online Shopping System!")
-        st.image("online-shopping.jpg")
+        st.image(os.path.join(os.getcwd(), "Streamlit-App/online-shopping.jpg"))
         st.balloons()
         st.subheader("Instructions :")
         st.write('-'*40)
