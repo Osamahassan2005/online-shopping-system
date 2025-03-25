@@ -160,7 +160,7 @@ def main_menu():
             st.session_state.page = "admin_menu"  # Navigate to admin menu
             st.rerun()  # Force rerun to update the UI
         else:
-            st.error("Please enter your name and password to login.")
+            st.info("Please enter your name and password to login.")
     elif option == "Customer Login":
         st.subheader("Customer Login:")
         st.write('-'*40)
@@ -170,9 +170,9 @@ def main_menu():
             st.session_state.page = "customer_menu"  # Navigate to customer menu
             st.rerun()  # Force rerun to update the UI
         else:
-            st.error("Please enter your name to continue.")
+            st.info("Please enter your name to continue.")
     elif option == "Exit":
-        st.success("Goodbye! Thank you for using our service.")
+        st.info("Goodbye! Thank you for using our service.")
         st.stop()
 
 # Main App Logic
