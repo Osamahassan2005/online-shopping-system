@@ -123,7 +123,7 @@ class Customer(User):
                 data=file_buffer,
                 file_name=file_name,
                 mime='application/vnd.openxmlformats-officedocument.wordprocessingml.document')
-        st.success(f'Receipt Generated successfully as "{file_name}".')
+        st.info(f'Receipt Generated successfully as "{file_name}".')
 
     def download_receipt(self,time,total_price,payment_method,payment_details,cart_items):
         '''Download receipt'''          
