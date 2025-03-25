@@ -33,6 +33,7 @@ class Payment:
             self.details.append(f'Credit/Debit Card: {card_number}, Expiry: {card_expiry}, CVV: {card_cvv}')
             return True
         else:
+            st.error('Payment failed! Please try again.')
             return False
         
     def bank_transfer(self):
@@ -44,6 +45,7 @@ class Payment:
             self.details.append(f'Bank Transfer: {bank_account_number}, Routing: {bank_routing_number}')
             return True
         else:
+            st.error('Payment failed! Please try again.')
             return False
         
     def mobile_money(self):
@@ -55,6 +57,7 @@ class Payment:
             self.details.append(f'Mobile Money: {mobile_money_number}, Provider: {mobile_money_provider}')
             return True
         else:
+            st.error('Payment failed! Please try again.')
             return False
  
         
