@@ -15,7 +15,7 @@ class Admin(User):
     def save_admin(self):
         '''Save admin details to admins.csv'''
         try:
-            file_path='data/admins.csv'
+            file_path='Streamlit-App/data/admins.csv'
             file_exists=os.path.isfile(file_path)
             
             with open(file_path,'r') as f:
@@ -39,7 +39,7 @@ class Admin(User):
     def login(user_name,user_password):
         '''Login admin with name and password'''
         try:
-            with open('data/admins.csv','r') as f:
+            with open('Streamlit-App/data/admins.csv','r') as f:
                 reader=csv.DictReader(f)
                 for row in reader:
                     if row['Name'].lower() == user_name.lower() and row['Password'] == user_password:
@@ -60,7 +60,7 @@ class Admin(User):
     def Update_stock(self,product_name,new_quantity):
         '''Update stock of existing product'''
         try:
-           file_path='data/products.csv'
+           file_path='Streamlit-App/data/products.csv'
            file_exists=os.path.isfile(file_path)
            with open(file_path,'r') as f:
                   reader=csv.DictReader(f)
@@ -85,7 +85,7 @@ class Admin(User):
     def remove_product(self,product_name):
         '''Remove product from products.csv'''
         try:
-           file_path='data/products.csv'
+           file_path='Streamlit-App/data/products.csv'
            file_exists=os.path.isfile(file_path)
            with open(file_path,'r') as f:
                   reader=csv.DictReader(f)
