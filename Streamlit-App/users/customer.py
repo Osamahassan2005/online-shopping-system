@@ -85,7 +85,6 @@ class Customer(User):
                Product.update_stock(product_name,quantity)
             self.cart.clear_cart()
         else:
-            st.error('Payment failed! Please try again.')
             return
     def generate_receipt(self):
         '''Generate receipt'''
