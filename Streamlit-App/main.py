@@ -149,7 +149,7 @@ def main_menu():
             new_admin = Admin(your_name, your_password)
             new_admin.save_admin()
         else:
-            st.error("Please enter your name and password to register.")
+            st.info("Please enter your name and password to register.")
     elif option == "Admin Login":
         st.subheader("Admin Login")
         user_name = st.text_input("Enter Admin name:", key="main_admin_login_name").upper()
