@@ -94,9 +94,7 @@ class Customer(User):
         total_price=st.session_state.get('total_price',0)
         payment_method=st.session_state.get('payment_method')
         payment_details=st.session_state.get('payment_details')
-        if not cart_items :
-            st.error('Your cart is empty.')
-            return
+        
         st.subheader("RECEIPT 📝")
         st.write('='*30)
         st.write(f"{time}")
