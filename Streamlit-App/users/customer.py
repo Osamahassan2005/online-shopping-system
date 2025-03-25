@@ -19,7 +19,7 @@ class Customer(User):
     def add_to_cart(self,product_name,Quantity):
         '''Add product to cart'''
         try:
-           with open('data/products.csv','r') as f:
+           with open('Streamlit-App/data/products.csv','r') as f:
                   reader=csv.DictReader(f)
                   products=[row for row in reader if row]
         except FileNotFoundError:
