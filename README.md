@@ -1,29 +1,32 @@
-Report: CLI-Based Online Shopping System
+Report: Online Shopping System 🛍 (CLI & Streamlit-Based Web App)
 
 1. Introduction
 
-The CLI-Based Online Shopping System is a Python-based application that enables users to perform online shopping operations through a command-line interface. It includes Admin and Customer functionalities, allowing product management, cart operations, and order placement.
+The Online Shopping System is a Python-based application designed to facilitate online shopping operations. Initially developed as a Command-Line Interface (CLI) application, it has now been enhanced into a Streamlit-based Web Application for a more user-friendly shopping experience. The system includes functionalities for both Admin and Customers, allowing product management, cart operations, order placement, and now, online payments with receipt generation.
 
 
 ---
 
 2. System Features
 
+CLI-Based Online Shopping System
+
 Admin Features:
 
-1. View Admin Details – Displays admin information.
+1. View Admin Details – Displays admin credentials.
 
 
-2. Add Products – Admin can add new products to the inventory.
+2. Add Products – Allows the admin to add new products.
 
 
-3. Update Stock – Modify the quantity of existing products.
+3. Update Stock – Modifies stock quantity for existing products.
 
 
-4. Remove Products – Delete products from the inventory.
+4. Remove Products – Deletes products from the inventory.
 
 
-5. View Products – Display all available products.
+5. View Products – Displays all available products.
+
 
 
 Customer Features:
@@ -31,13 +34,55 @@ Customer Features:
 1. View Available Products – Displays all items in stock.
 
 
-2. Add Products to Cart – Customers can add items to their shopping cart.
+2. Add Products to Cart – Customers can add items to their cart.
 
 
-3. View and Update Cart – Review and modify cart items.
+3. View and Update Cart – Reviews and modifies cart items.
 
 
-4. Place Order – Checkout and confirm order placement.
+4. Place Order – Confirms order placement.
+
+
+
+
+---
+
+Streamlit-Based Web App Features
+
+Admin Features:
+
+1. Interactive Dashboard – View and manage products visually.
+
+
+2. Add Products – Add new products through web forms.
+
+
+3. Update Stock – Modify product quantity dynamically.
+
+
+4. Remove Products – Delete products using buttons.
+
+
+5. View Products – Display products in an organized table.
+
+
+
+Customer Features:
+
+1. Browse Products – Displays products with images and details.
+
+
+2. Add to Cart – Select items and quantities via UI.
+
+
+3. Cart Management – Update or remove items from the cart.
+
+
+4. Secure Checkout – Users can pay before checkout for convenience.
+
+
+5. Download Receipt (DOCX) – Customers can download an order summary.
+
 
 
 
@@ -45,82 +90,89 @@ Customer Features:
 
 3. Sample Execution & Output
 
+CLI Version Sample Execution
+
 Admin Menu:
 
-Admin Options:
-1) View Details
-2) Add Product
-3) Update Stock
-4) Remove Product
-5) View Products
+Admin Options:  
+1) View Details  
+2) Add Product  
+3) Update Stock  
+4) Remove Product  
+5) View Products  
 6) Logout
 
-Enter your choice: 5
+Example Output (Viewing Products):
 
-Output:
-
-Available Products:
-1. Laptop - $1000 (Stock: 5)
+Available Products:  
+1. Laptop - $1000 (Stock: 5)  
 2. Smartphone - $500 (Stock: 10)
 
-Adding a Product:
+Example Output (Adding a Product):
 
-Enter Product name: Headphones
-Enter Product price: 100
-Enter Product stock: 15
+Enter Product name: Headphones  
+Enter Product price: 100  
+Enter Product stock: 15  
 
-Output:
-
-Headphones added successfully!
-
----
+Output: Headphones added successfully!
 
 Customer Menu:
 
-Hello, Customer!
-
-1) View Products
-2) Add to Cart
-3) View Cart
-4) Checkout
+Customer Options:  
+1) View Products  
+2) Add to Cart  
+3) View Cart  
+4) Checkout  
 5) Exit
 
-Enter your choice: 2
+Example Output (Adding to Cart):
 
-Adding a Product to Cart:
+Enter Product name: Laptop  
+Enter Quantity: 1  
 
-Enter Product name: Laptop
-Enter Quantity: 1
+Output: Laptop added to cart!
 
-Output:
+Example Output (Checkout):
 
-Laptop added to cart!
+Proceed to checkout? (yes/no): yes  
 
-Viewing Cart:
+Output: Order placed successfully!
 
-1. Laptop - $1000 (Quantity: 1)
-Total Amount: $1000
 
-Placing Order:
+---
 
-Proceed to checkout? (yes/no): yes
+Streamlit Web App Sample Execution
 
-Output:
+Admin Interface
 
-Order placed successfully!
+Product Dashboard: Displays a table of all products.
+
+Add Product Form: Admin enters details and clicks "Add Product".
+
+Stock Update: Admin selects a product, enters a new quantity, and updates.
+
+
+Customer Interface
+
+Browsing Products: Users see a table with product names, prices, and stock.
+
+Adding to Cart: Clicking “Add to Cart” updates the session cart.
+
+Cart View: Displays selected items with an option to modify them.
+
+Checkout: Users can choose to pay before checkout.
+
+Download Receipt: After payment, users can download a DOCX file with order details.
+
+
 
 ---
 
 4. Data Storage
 
-Products are stored in data/products.csv
-
-Order history is stored in data/order_history.csv
-
-Admin credentials are stored in data/admins.csv
 
 ---
 
 5. Conclusion
 
-The CLI-Based Online Shopping System efficiently allows admins to manage products and customers to shop conveniently. The system follows an interactive command-line interface to provide a smooth shopping experience.
+The Online Shopping System has evolved from a CLI-based application to a modern web application using Streamlit. The web version enhances usability with an interactive UI, online payments, and receipt generation, making the shopping experience smoother and more efficient. This transformation makes the system more user-friendly and accessible, providing a seamless shopping experience. 
