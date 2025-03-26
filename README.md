@@ -1,5 +1,8 @@
 Report: Online Shopping System 🛍 (CLI & Streamlit-Based Web App)
 
+0. Web App Live (https://online-shopping-system-app.streamlit.app/) 
+
+
 1. Introduction
 
 The Online Shopping System is a Python-based application designed to facilitate online shopping operations. Initially developed as a Command-Line Interface (CLI) application, it has now been enhanced into a Streamlit-based Web Application for a more user-friendly shopping experience. The system includes functionalities for both Admin and Customers, allowing product management, cart operations, order placement, and now, online payments with receipt generation.
@@ -163,12 +166,6 @@ Cart View: Displays selected items with an option to modify them.
 Checkout: Users can choose to pay before checkout.
 
 Download Receipt: After payment, users can download a DOCX file with order details.
-
-
-
----
-
-4. Data Storage
 
 
 ---
